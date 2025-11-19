@@ -1,0 +1,77 @@
+{
+  "title": "Multi-Language Translator Output",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "originalText": {
+      "title": "Original Text",
+      "type": "string",
+      "description": "The original text that was translated",
+      "editor": "textarea"
+    },
+    "sourceLanguage": {
+      "title": "Source Language",
+      "type": "string",
+      "description": "The detected or specified source language code",
+      "editor": "textfield"
+    },
+    "translations": {
+      "title": "Translations",
+      "type": "array",
+      "description": "Array of translations to different languages",
+      "editor": "json",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "Language code (e.g., 'es', 'fr', 'de')"
+          },
+          "languageName": {
+            "type": "string",
+            "description": "Full language name (e.g., 'Spanish', 'French')"
+          },
+          "text": {
+            "type": "string",
+            "description": "The translated text"
+          },
+          "confidence": {
+            "type": "number",
+            "description": "Translation confidence score (0-1)"
+          }
+        }
+      }
+    },
+    "wordCount": {
+      "title": "Word Count",
+      "type": "integer",
+      "description": "Number of words in the original text",
+      "editor": "number"
+    },
+    "cost": {
+      "title": "API Cost",
+      "type": "number",
+      "description": "Total API cost in USD",
+      "editor": "number"
+    },
+    "chargePrice": {
+      "title": "Charge Price",
+      "type": "number",
+      "description": "Price charged to user in USD",
+      "editor": "number"
+    },
+    "profit": {
+      "title": "Profit",
+      "type": "number",
+      "description": "Profit from this translation in USD",
+      "editor": "number"
+    },
+    "translatedAt": {
+      "title": "Translated At",
+      "type": "string",
+      "description": "ISO timestamp of when this was translated",
+      "editor": "textfield",
+      "format": "date-time"
+    }
+  }
+}
