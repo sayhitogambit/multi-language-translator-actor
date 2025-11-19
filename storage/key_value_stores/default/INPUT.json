@@ -1,0 +1,9 @@
+{
+  "text": "Hello, world! Welcome to our platform.",
+  "sourceLanguage": "en",
+  "targetLanguages": ["es", "fr", "de"],
+  "preserveFormatting": true,
+  "context": "",
+  "model": "anthropic/claude-3.5-sonnet",
+  "openrouterApiKey": "YOUR_OPENROUTER_API_KEY_HERE"
+}

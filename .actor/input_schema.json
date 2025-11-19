@@ -1,0 +1,15 @@
+{
+  "title": "Multi-Language Translator Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "text": {"title": "Text to Translate", "type": "string", "editor": "textarea", "minLength": 1},
+    "sourceLanguage": {"title": "Source Language", "type": "string", "enum": ["auto", "en", "es", "fr", "de", "it", "pt", "zh", "ja", "ko"], "default": "auto"},
+    "targetLanguages": {"title": "Target Languages", "type": "array", "editor": "stringList", "minItems": 1},
+    "preserveFormatting": {"title": "Preserve Formatting", "type": "boolean", "default": true},
+    "context": {"title": "Translation Context (optional)", "type": "string", "default": ""},
+    "model": {"title": "AI Model", "type": "string", "enum": ["anthropic/claude-3.5-sonnet", "openai/gpt-4o"], "default": "anthropic/claude-3.5-sonnet"},
+    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "isSecret": true}
+  },
+  "required": ["text", "targetLanguages", "openrouterApiKey"]
+}

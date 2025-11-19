@@ -1,0 +1,10 @@
+{
+  "actorSpecification": 1,
+  "name": "multi-language-translator",
+  "title": "AI Multi-Language Translator - OpenRouter",
+  "description": "Translate text to multiple languages simultaneously using AI. Supports 50+ languages with context-aware translations. Perfect for international content, localization, and global marketing.",
+  "version": "1.0.0",
+  "dockerfile": "./Dockerfile",
+  "input": "./.actor/input_schema.json",
+  "readme": "./README.md"
+}
