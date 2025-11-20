@@ -4,12 +4,12 @@
   "schemaVersion": 1,
   "properties": {
     "text": {"title": "Text to Translate", "type": "string", "description": "The text content to translate", "editor": "textarea", "minLength": 1},
-    "sourceLanguage": {"title": "Source Language", "type": "string", "description": "Source language of the text (auto-detect if not specified)", "enum": ["auto", "en", "es", "fr", "de", "it", "pt", "zh", "ja", "ko"], "default": "auto"},
+    "sourceLanguage": {"title": "Source Language", "type": "string", "description": "Source language of the text (auto-detect if not specified)", "editor": "select", "enum": ["auto", "en", "es", "fr", "de", "it", "pt", "zh", "ja", "ko"], "default": "auto"},
     "targetLanguages": {"title": "Target Languages", "type": "array", "description": "Languages to translate the text into", "editor": "stringList", "minItems": 1},
-    "preserveFormatting": {"title": "Preserve Formatting", "type": "boolean", "description": "Maintain the original text formatting in translations", "default": true},
-    "context": {"title": "Translation Context (optional)", "type": "string", "description": "Additional context to help with accurate translation", "default": ""},
-    "model": {"title": "AI Model", "type": "string", "description": "AI model to use for generation", "enum": ["anthropic/claude-3.5-sonnet", "openai/gpt-4o"], "default": "anthropic/claude-3.5-sonnet"},
-    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "description": "Your OpenRouter API key from https://openrouter.ai/keys", "isSecret": true}
+    "preserveFormatting": {"title": "Preserve Formatting", "type": "boolean", "description": "Maintain the original text formatting in translations", "editor": "checkbox", "default": true},
+    "context": {"title": "Translation Context (optional)", "type": "string", "description": "Additional context to help with accurate translation", "editor": "textfield", "default": ""},
+    "model": {"title": "AI Model", "type": "string", "description": "AI model to use for generation", "editor": "select", "enum": ["anthropic/claude-3.5-sonnet", "openai/gpt-4o"], "default": "anthropic/claude-3.5-sonnet"},
+    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "description": "Your OpenRouter API key from https://openrouter.ai/keys", "editor": "textfield", "isSecret": true}
   },
   "required": ["text", "targetLanguages", "openrouterApiKey"]
 }
